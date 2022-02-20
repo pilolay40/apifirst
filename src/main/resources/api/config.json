@@ -1,0 +1,17 @@
+{
+  "developerName": "Nelson Alexandro Hernandez Payano",
+  "developerEmail": "pilolay40@hotmail.com",
+  "modelPackage": "com.apifirst.test.price.infrastructure.generate.model",
+  "apiPackage": "com.apifirst.test.price.infrastructure.generate.api",
+  "dateLibrary": "java8",
+  "useBeanValidation": true,
+  "interfaceOnly": true,
+  "useOptional": true,
+  "library": "spring-boot",
+  "typeMappings": {
+    "OffsetDateTime": "LocalDateTime"
+  },
+  "importMappings": {
+    "java.time.OffsetDateTime": "java.time.LocalDateTime"
+  }
+}
