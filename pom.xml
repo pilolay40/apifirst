@@ -20,6 +20,7 @@
         <springfox-swagger2.version>2.9.2</springfox-swagger2.version>
         <springdoc-openapi-ui.version>1.5.13</springdoc-openapi-ui.version>
         <jackson-databind-nullable.version>0.2.2</jackson-databind-nullable.version>
+        <mapstruct.version>1.4.2.Final</mapstruct.version>
     </properties>
     <dependencies>
         <dependency>
