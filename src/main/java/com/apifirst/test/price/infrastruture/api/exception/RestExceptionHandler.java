@@ -30,7 +30,7 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
     }
 
     @ExceptionHandler(PriceNotFoundException.class)
-    public ResponseEntity<PriceError> notFoundException(final PriceException exception) {
+    public ResponseEntity<PriceError> notFoundException(final PriceNotFoundException exception) {
         final PriceError priceError = new PriceError();
         priceError.setDetail(exception.getLocalizedMessage());
         priceError.setTitle(exception.getMessage());

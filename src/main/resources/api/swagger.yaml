@@ -79,7 +79,12 @@ components:
         priceList:
           description: Price application
           type: integer
-        applyDate:
+        startDate:
+          description: application date
+          type: string
+          format: date-time
+          example: yyyy-MM-dd-HH.mm.ss
+        endDate:
           description: application date
           type: string
           format: date-time

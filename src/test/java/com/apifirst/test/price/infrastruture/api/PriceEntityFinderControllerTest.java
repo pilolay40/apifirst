@@ -35,15 +35,6 @@ class PriceEntityFinderControllerTest {
     @MockBean
     private PriceResponseToPriceMapper priceResponseToPriceMapper;
 
-    @Test
-    void getPriceHappyPath() throws Exception {
-
-        this.mockMvc.perform(MockMvcRequestBuilders.get(BASE_PATH)
-                .param(PRODUCT_ID_PARAM, String.valueOf(productIdRandom()))
-                .param(BRAND_ID_PARAM, String.valueOf(brandIdRandom()))
-                .param(APPLY_DATE_PARAM, String.valueOf(applyDateRandom())))
-                .andExpect(status().isOk());
-    }
 
     @Test
     @DisplayName("Test 1: petición a las 10:00 del día 14 del producto 35455   para la brand 1 (ZARA) (2020-06-14-10.00.00)")
@@ -65,7 +56,8 @@ class PriceEntityFinderControllerTest {
         final PriceResponse priceResponse = new PriceResponse();
         priceResponse.setProductId(price.getProductId());
         priceResponse.setBrandId(price.getBrandId());
-        priceResponse.setApplyDate(price.getStartDate());
+        priceResponse.setStartDate(price.getStartDate());
+        priceResponse.setEndDate(price.getEndDate());
         priceResponse.setPriceList(priceList);
         priceResponse.setPrice(price.getPrice());
         given(this.priceResponseToPriceMapper.priceToPriceResponse(any())).willReturn(priceResponse);
