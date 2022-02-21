@@ -19,7 +19,8 @@ public class PriceFinderUserCase {
 
     public Price getPrice(final PriceRequest priceRequest) {
         final List<Price> prices = this.priceFinderRepository
-                .findPriceByProductIdAndBrandIdAndApplyDate(priceRequest.getProductId(),priceRequest.getBrandId(), priceRequest.getApplyDate());
+                .findPriceByProductIdAndBrandIdAndApplyDate(priceRequest.getProductId(),
+                        priceRequest.getBrandId(), priceRequest.getApplyDate());
 
         return prices.stream()
                 .max(Comparator.comparingInt(Price::getPriceList))
